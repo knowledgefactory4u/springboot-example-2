@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>AngularJS</title>
+
+
+
+<script th:src="@{/angular.js}"></script>
+<script th:src="@{/jquery.min.js}"></script>
+<script th:src="@{/bootstrap.min.js}"></script>
+<script th:src="@{/main.js}"></script>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../../bootstrap.min.css" th:href="@{/bootstrap.min.css}" />
+<head>
+<body ng-app="UserManagement" ng-controller="UserController">
+<div class="container">
+<div class="row">
+<div class="col-sm-2"></div>
+<div class="col-sm-8">
+	<h3>CRUD: Spring Boot +AngularJS+Bootstrap</h3>
+	<form ng-submit="submitUser()">
+		<table class="table table-striped" >
+
+			<tr>
+				<td>First Name</td>
+				<td><input class="form-control input-sm" type="text" ng-model="userForm.firstName" /></td>
+			</tr>
+			<tr>
+				<td>Last Name</td>
+				<td><input type="text"class="form-control input-sm" ng-model="userForm.lastName" /></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input type="text" class="form-control input-sm" ng-model="userForm.email" /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="Submit"
+					class="btn btn-primary" /></td>
+			</tr>
+		</table>
+	</form>
+	<br />
+	<a class="create-button" ng-click="createUser()"><button type="button" class="btn btn-info">Create User</button></a><br><br>
+	<table class="table table-striped">
+		<tr>
+			<th>Id</th>
+			<th>FirstName</th>
+			<th>LastName</th>
+			<th>Email</th>
+			<th>Edit</th>
+			<th>Delete</th>
+		</tr>
+		<!-- $scope.users -->
+		<tr ng-repeat="user in users">
+			<td>{{ user.id }}</td>
+			<td>{{ user.firstName }}</td>
+			<td>{{ user.lastName }}</td>
+			<td>{{ user.email }}</td>
+			<td><a ng-click="editUser(user)" class="btn btn-warning">Edit</a></td>
+			<td><a ng-click="deleteUser(user)" class="btn btn-danger">Delete</a>
+			</td>
+		</tr>
+	</table></div><div class="col-sm-2"></div>
+</div></div>
+</body>
+</html>
