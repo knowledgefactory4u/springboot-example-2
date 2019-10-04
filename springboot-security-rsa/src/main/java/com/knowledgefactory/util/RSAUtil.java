@@ -68,23 +68,5 @@ public class RSAUtil {
 		return priv;
 	}
 
-	public static void main(String[] args) throws Exception {
-
-		RSAUtil keyPairGenerator = new RSAUtil();
-		String publickey = Base64.getEncoder().encodeToString(keyPairGenerator.getPublicKey().getEncoded());
-		String privateKey = Base64.getEncoder().encodeToString(keyPairGenerator.getPrivateKey().getEncoded());
-		/*
-		 * System.out.println(Base64.getEncoder().encodeToString(keyPairGenerator.
-		 * getPublicKey().getEncoded()));
-		 * System.out.println(Base64.getEncoder().encodeToString(keyPairGenerator.
-		 * getPrivateKey().getEncoded()));
-		 */
-		System.out.println(publickey);
-		System.out.println(privateKey);
-		String dec = (encryptMessage("asdsadsadasdsadadasdasdasda",
-				"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCyWa+xxQlWXpof2bKPlyUl2ZShbvHO74ijBKFt6a0RY1Z7lmXmj54/D7B0Vd6gIYdCkoxyLn+EBIqtHVnkP9j24mQz1Dl/xJH0i8Wf8hwt0d1+T3P+9dLYjVqzhDp/aYXkwwDnx7akB5UCApLxBgbb120hJsfkzW8/i++nUZsTxwIDAQAB"));
-		System.out.println(dec);
-		//System.out.println(decryptMessage(dec, privateKey));
-
-	}
+	
 }
