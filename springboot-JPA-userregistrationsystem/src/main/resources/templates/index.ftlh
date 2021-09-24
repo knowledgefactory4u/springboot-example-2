@@ -12,9 +12,6 @@
 <!-- Ionicons -->
 <link rel="stylesheet"
 	href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-<!-- overlayScrollbars -->
-<link rel="stylesheet"
-	href="../../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
 <!-- Theme style -->
 <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
 <!-- Google Font: Source Sans Pro -->
@@ -36,10 +33,6 @@
 					class="nav-link">Home</a></li>
 
 			</ul>
-
-
-
-
 
 		</nav>
 
@@ -70,10 +63,6 @@
 			<section class="content">
 
 				<div class="container-fluid">
-
-
-
-
 
 					<!-- Modal -->
 					<div class="modal fade" id="myModal" role="dialog">
@@ -262,10 +251,6 @@
 	<script src="../../plugins/jquery/jquery.min.js"></script>
 	<!-- Bootstrap 4 -->
 	<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<!-- overlayScrollbars -->
-	<script
-		src="../../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-
 	<script src="../../dist/js/adminlte.min.js"></script>
 	<script src="../../dist/js/controller.js"></script>
 
