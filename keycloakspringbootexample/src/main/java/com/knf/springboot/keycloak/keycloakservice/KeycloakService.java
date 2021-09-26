@@ -54,15 +54,15 @@ public class KeycloakService {
                 .resteasyClient(new ResteasyClientBuilder().
                         connectionPoolSize(10).build()).build();
         keycloak.tokenManager().getAccessToken();
-        UserRepresentation user = new UserRepresentation();
-        user.setEnabled(true);
-        user.setUsername(employeeVo.getEmail());
-        user.setFirstName(employeeVo.getFirstname());
-        user.setLastName(employeeVo.getLastname());
-        user.setEmail(employeeVo.getEmail());
+        UserRepresentation employee = new UserRepresentation();
+        employee.setEnabled(true);
+        employee.setUsername(employeeVo.getEmail());
+        employee.setFirstName(employeeVo.getFirstname());
+        employee.setLastName(employeeVo.getLastname());
+        employee.setEmail(employeeVo.getEmail());
         RealmResource realmResource = keycloak.realm(realm);
         UsersResource usersResource = realmResource.users();
-        Response response = usersResource.create(user);
+        Response response = usersResource.create(employee);
         employeeVo.setStatusCode(response.getStatus());
         employeeVo.setStatus(response.getStatusInfo().toString());
 
